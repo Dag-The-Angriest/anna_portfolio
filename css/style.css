@@ -64,14 +64,14 @@ body {
 h1 {
   font-weight: bold;
   font-size: 56px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02;
   line-height: 60px;
 }
 
 h2 {
   font-weight: bold;
   font-size: 36px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02;
 }
 
 h3 {
@@ -90,8 +90,10 @@ button {
   cursor: pointer;
 }
 
-button:hover,
-button:focus {
+.hero-button:hover,
+.hero-button:focus,
+.footer-form-button:hover,
+.footer-form-button:focus {
   background-color: var(--ocean);
 }
 
@@ -120,8 +122,8 @@ svg:focus {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .header-main {
@@ -225,19 +227,21 @@ svg:focus {
     url("../images/people-office.jpg");
   justify-self: center;
   max-width: 320px;
-  padding: 188px 0;
+  padding: 72px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .hero-h {
-  line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white);
   max-width: 496px;
   margin: 0 auto 48px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 }
 .hero-button {
   background-color: var(--iris);
@@ -245,7 +249,7 @@ svg:focus {
   margin: 0 auto;
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white);
   border-radius: 4px;
@@ -277,9 +281,17 @@ svg:focus {
 
 .goals-h {
   margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .goals-p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
@@ -291,6 +303,7 @@ header,
 
 .team {
   background-color: var(--cloud);
+  padding: 96px 0;
 }
 
 .team-card {
@@ -310,6 +323,8 @@ header,
   letter-spacing: 0.02em;
   text-transform: capitalize;
   margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
 }
 
 .team-list {
@@ -796,7 +811,9 @@ header,
   position: fixed;
   top: 0;
   right: 0;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 767px;
   height: 100%;
   background-color: white;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1007,6 +1024,11 @@ header,
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .flex {
