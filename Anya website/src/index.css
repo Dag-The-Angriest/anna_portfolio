@@ -1,0 +1,251 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #c5aaf2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.purple_heading {
+  color: #2f065e;
+  font-size: 36px;
+  text-shadow: -1px 2px 4px #2f065e;
+  padding-bottom: 45px;
+  text-align: center;
+}
+.purple_text {
+  color: #2f065e;
+}
+.purple_text_about {
+  color: #320559;
+  text-align: left;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding: 0 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  margin: 0;
+  padding: 16px 16px;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(109, 54, 181, 75%),
+    rgba(197, 170, 242, 35%)
+  );
+}
+
+.navbar_icon {
+  border: #646cff, solid;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.mobile_menu {
+  background-color: #c5aaf2;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 60px;
+  position: absolute;
+  /* top: -1000px; */
+  right: -100%;
+  width: 100%;
+  height: 100%;
+}
+.is_open {
+  display: flex;
+  animation: loader 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loader {
+  0% {
+    translate: 0px 0px;
+  }
+  100% {
+    translate: -100% 0;
+  }
+}
+
+.menu_nav_button {
+  width: 324px;
+  height: 64px;
+  border-radius: 45px;
+  /* background-color: #9813d0; */
+  background: radial-gradient(closest-corner at 50%, #9813d0 80%, #e642f3);
+  align-content: center;
+  box-shadow:
+    inset 3px 3px 0.5px -3.5px rgba(255, 255, 255, 75%),
+    inset 3px 3px 0.5px -3.5px rgba(255, 255, 255, 80%),
+    inset 1px 1px 1px 0.5px rgba(255, 255, 255, 75%),
+    inset -1px -1px 1px 0.5px rgba(255, 255, 255, 75%),
+    inset 0px 0px 1px 1px rgba(255, 255, 255, 15%),
+    inset 0px 0px 1px 1px #999999,
+    inset 0px 0px 16px 0px #f2f2f2,
+    0px 0px 2px 0px rgba(0, 0, 0, 10%),
+    0px 8px 6.900000095367432px 0px rgba(88, 13, 105, 46%);
+}
+.menu_nav_button p {
+  color: #f2e8ff;
+}
+
+.hero {
+  margin: 50px 0;
+}
+.hero_heading {
+  margin-bottom: 25px;
+}
+
+.about {
+  background-color: #fffee7;
+  margin: 0 16px;
+  padding: 0 12px 100px;
+  border-radius: 8px;
+}
+
+.about_img {
+  border: red;
+  border-radius: 50%;
+  width: 218px;
+  height: 218px;
+  margin-bottom: 50px;
+}
+
+.right_sticker {
+  float: right;
+  position: relative;
+  left: 28px;
+}
+.left_sticker {
+  float: left;
+  position: relative;
+  right: 28px;
+}
+
+.button_glass {
+  margin: 50px 0;
+}
+
+.reviews {
+  display: flex;
+  padding: 0 16px;
+}
+.review {
+}
+
+.random_facts {
+}
+
+.fact {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.fact_number {
+  font-size: 48px;
+  color: #2f065e;
+  text-shadow: -1px 2px 4px #2f065e;
+  margin-right: 20px;
+}
+
+.fact_text {
+  text-align: left;
+  background-color: #6000de;
+  border-radius: 8px;
+  padding: 10px 13px;
+}
