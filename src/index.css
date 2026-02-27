@@ -134,7 +134,16 @@ button:focus-visible {
   height: 48px;
 }
 
-.mobile_menu {
+.mobile_nav_bar {
+  cursor: pointer;
+}
+.mobile_nav_arrow {
+  cursor: pointer;
+  display: block;
+}
+
+.mobile_menu,
+.mobile_portfolio_menu {
   background-color: #c5aaf2;
   display: none;
   align-items: center;
@@ -142,7 +151,6 @@ button:focus-visible {
   gap: 32px;
   margin-top: 60px;
   position: absolute;
-  /* top: -1000px; */
   right: -100%;
   width: 100%;
   height: 100%;
@@ -161,8 +169,16 @@ button:focus-visible {
     translate: -100% 0;
   }
 }
+.invis {
+  display: none;
+}
+.visib {
+  display: block;
+}
 
 .menu_nav_button {
+  color: #f2e8ff;
+  display: block;
   width: 324px;
   height: 64px;
   border-radius: 45px;
@@ -179,9 +195,6 @@ button:focus-visible {
     inset 0px 0px 16px 0px #f2f2f2,
     0px 0px 2px 0px rgba(0, 0, 0, 10%),
     0px 8px 6.900000095367432px 0px rgba(88, 13, 105, 46%);
-}
-.menu_nav_button p {
-  color: #f2e8ff;
 }
 
 .hero {

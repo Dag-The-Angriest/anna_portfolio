@@ -1,22 +1,28 @@
 import MenuButton from "./MenuButton";
 
 function MobileMenu() {
+  function handleClick(e) {
+    const menu = document.querySelector(".mobile_nav_bar");
+    const arrow = document.querySelector(".mobile_nav_arrow");
+    const portfo = document.querySelector("li")?.firstChild;
+    const mobPortfo = document.querySelector(".mobile_portfolio_menu");
+    if (e.target !== portfo) {
+      return;
+    }
+    return (
+      mobPortfo.classList.toggle("is_open"),
+      menu?.classList.toggle("invis"),
+      arrow.classList.toggle("invis")
+    );
+    // return console.log(mobPortfo);
+  }
   return (
-    <div className="mobile_menu ">
-      <a href="" className="menu_nav_button">
-        <p>PORTFOLIO</p>
-      </a>
-      <a href="" className="menu_nav_button">
-        <p>WSPÓŁPRACA</p>
-      </a>
-      <a href="" className="menu_nav_button">
-        <p>WYKSZTAŁCENIE</p>
-      </a>
-      <a href="" className="menu_nav_button">
-        <p>KONTAKT</p>
-      </a>
-      <MenuButton text={"hello"} />
-    </div>
+    <ul className="mobile_menu " onClick={handleClick}>
+      <MenuButton text={"PORTFOLIO"} href={"#"} />
+      <MenuButton text={"WSPÓŁPRACA"} href={"#"} />
+      <MenuButton text={"WYKSZTAŁCENIE"} href={"#"} />
+      <MenuButton text={"KONTAKT"} href={"#"} />
+    </ul>
   );
 }
 

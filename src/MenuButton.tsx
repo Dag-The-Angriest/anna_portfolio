@@ -1,8 +1,10 @@
-function MenuButton({ text }: { text: string }) {
+function MenuButton({ text, href }: { text: string; href: string }) {
   return (
-    <a href="" className="menu_nav_button">
-      <p>{text}</p>
-    </a>
+    <li>
+      <a href={href} className="menu_nav_button">
+        {text}
+      </a>
+    </li>
   );
 }
 
